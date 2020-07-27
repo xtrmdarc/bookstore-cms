@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">React Project Bookstore</h1>
 
-## Available Scripts
+<p align="center">
+  <img src ='src/img/' alt='Preview of the Bookstore app'>
+</p>
 
-In the project directory, you can run:
+# :arrow_right: [Live Demo](https://dieju-bookstore-cms.herokuapp.com/)
 
-### `yarn start`
+## Authors
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+:man: Diego Antonio Reyes Coronado
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Github: [@xtrmdarc](https://github.com/xtrmdarc)
+- Twitter: [@diegoreyesco](https://twitter.com/DiegoAn91629127)
+- Linkedin: [diegoreyesco](https://www.linkedin.com/in/diego-reyes-coronado)
 
-### `yarn test`
+:man: Julian Belmonte
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Github: [Julian Belmonte](https://github.com/jucora)
+- Twitter: [@Julian Belmonte](twitter.com/JulianBelmonte)
+- Linkedin: [Julian Belmonte](linkedin.com/in/julianbel)
 
-### `yarn build`
+## :pencil: Main Description
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project consists of building the front-end of an application that will help a fictional company to organize and manage their bookstore. In order to make the app fast, dynamic and responsive to their actions, the implementation of React & Redux is required. This project is part of the main Microverse curriculum for the React course.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+For more information about the project requirements, please follow the next link: [React Project Bookstore](https://github.com/microverseinc/project-redux-bookstore)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to install the App
 
-### `yarn eject`
+1. Please clone the repository by running the next comand in your machine:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<pre><code>git clone https://github.com/xtrmdarc/bookstore-cms.git</code></pre>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Next, run the next command to install all project dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   For Yarn: <pre><code>yarn install</code></pre>
+   For npm: <pre><code>npm install</code></pre>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How to run the app locally
 
-## Learn More
+1. Get into the folder of the project by running the next command:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<pre><code>cd bookstore-cms</code></pre>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Start your local server by running the next command:
 
-### Code Splitting
+   For Yarn: <pre><code>yarn start</code></pre>
+   For npm: <pre><code>npm start</code></pre>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## :computer: Library, Languages and technologies
 
-### Analyzing the Bundle Size
+- React
+- React-DOM
+- Redux
+- JSX
+- CSS
+- Node.js
+- prop-types
+- npm
+- Javascript
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Report Issues
 
-### Making a Progressive Web App
+Please feel free to make a contribution, report any issue, feature request or provide any feedback. Click [here](https://github.com/xtrmdarc/bookstore-cms/issues)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Support
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Feel free to drop a like, that would support us a lot.
