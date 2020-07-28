@@ -1,8 +1,10 @@
-import React from "react";
-import { connect } from "react-redux";
-import Book from "../components/Book";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Book from '../components/Book';
 
-const BooksList = (props) => {
+const BooksList = props => {
+  const { books } = props;
   return (
     <table>
       <thead>
@@ -13,7 +15,7 @@ const BooksList = (props) => {
         </tr>
       </thead>
       <tbody>
-        {props.books.map((book) => (
+        {books.map(book => (
           <Book book={book} key={book.id} />
         ))}
       </tbody>
@@ -21,10 +23,13 @@ const BooksList = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    books: state.books,
-  };
+const mapStateToProps = state => ({
+  books: state.books,
+});
+
+BooksList.propTypes = {
+  books: PropTypes.shape({ id: PropTypes.number, map: PropTypes.func })
+    .isRequired,
 };
 
 export default connect(mapStateToProps)(BooksList);

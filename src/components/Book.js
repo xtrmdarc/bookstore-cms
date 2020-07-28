@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Books = props => {
+const Book = props => {
   const { book } = props;
   return (
     <tr>
@@ -11,4 +12,12 @@ const Books = props => {
   );
 };
 
-export default Books;
+Book.propTypes = {
+  book: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  }).isRequired,
+};
+
+export default Book;
