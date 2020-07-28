@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
+import Book from "../components/Book";
 
-const BooksList = () => {
+const BooksList = (props) => {
   return (
     <table>
       <thead>
@@ -12,9 +13,9 @@ const BooksList = () => {
         </tr>
       </thead>
       <tbody>
-        {props.books.map((book) => {
-          <Book book={book} key={book.id} />;
-        })}
+        {props.books.map((book) => (
+          <Book book={book} key={book.id} />
+        ))}
       </tbody>
     </table>
   );
