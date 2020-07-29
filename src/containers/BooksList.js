@@ -28,7 +28,7 @@ const mapStateToProps = state => ({
 });
 
 BooksList.propTypes = {
-  books: PropTypes.shape({ id: PropTypes.number, map: PropTypes.func })
+  books: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.number, map: PropTypes.func }))
     .isRequired,
 };
 
