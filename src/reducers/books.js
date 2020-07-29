@@ -1,6 +1,6 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
-const booksReducer = (state, action) => {
+const booksReducer = (state = {}, action) => {
   switch (action.key) {
     case CREATE_BOOK: {
       const newState = state.slice();

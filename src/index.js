@@ -4,9 +4,9 @@ import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
-import booksReducer from './reducers/books';
+import rootReducer from './reducers/index';
 
-const store = createStore(booksReducer, {
+const store = createStore(rootReducer, {
   books: [
     {
       id: parseInt(Math.random() * 1000, 10),
