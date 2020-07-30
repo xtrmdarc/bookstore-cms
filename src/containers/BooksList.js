@@ -61,6 +61,7 @@ BooksList.propTypes = {
     PropTypes.shape({ id: PropTypes.number, map: PropTypes.func })
   ).isRequired,
   removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, matchDispatchToProps)(BooksList);

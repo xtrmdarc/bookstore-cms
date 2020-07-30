@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class CategoryFilter extends React.Component {
   constructor(props) {
@@ -44,5 +45,9 @@ class CategoryFilter extends React.Component {
     );
   }
 }
+
+CategoryFilter.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+};
 
 export default CategoryFilter;
