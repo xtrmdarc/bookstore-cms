@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class CategoryFilter extends React.Component {
   constructor(props) {
@@ -10,21 +10,21 @@ class CategoryFilter extends React.Component {
 
   handleChange(e) {
     const { handleChange } = this.props;
-    this.setState({[e.target.name]: e.target.value});
+    this.setState({ [e.target.name]: e.target.value });
     handleChange(e.target.value);
   }
 
   render() {
     const { category } = this.state;
     const CATEGORIES = [
-      "All",
-      "Action",
-      "Biography",
-      "History",
-      "Horror",
-      "Kids",
-      "Learning",
-      "Sci-Fi",
+      'All',
+      'Action',
+      'Biography',
+      'History',
+      'Horror',
+      'Kids',
+      'Learning',
+      'Sci-Fi',
     ];
     return (
       <label htmlFor="categories">
@@ -35,7 +35,7 @@ class CategoryFilter extends React.Component {
           id="categories"
           onChange={this.handleChange}
         >
-          {CATEGORIES.map((cat) => (
+          {CATEGORIES.map(cat => (
             <option value={cat} key={parseInt(Math.random() * 1000, 10)}>
               {cat}
             </option>
