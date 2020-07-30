@@ -6,7 +6,7 @@ import { removeBook, changeFilter } from "../actions/index";
 import CategoryFilter from "../components/CategoryFilter";
 
 const BooksList = (props) => {
-  const { books, removeBook, changeFilter } = props;
+  const { books, removeBook, changeFilter, filter } = props;
 
   const handleRemoveBook = (book) => {
     removeBook(book);
@@ -29,7 +29,7 @@ const BooksList = (props) => {
           </tr>
         </thead>
         <tbody>
-          {books.map((book) => (
+          {books.filter(book => book.category === filter || filter === 'All').map((book) => (
             <Book
               book={book}
               key={book.id}
@@ -44,6 +44,7 @@ const BooksList = (props) => {
 
 const mapStateToProps = (state) => ({
   books: state.books,
+  filter: state.filter,
 });
 
 const matchDispatchToProps = (dispatch) => ({

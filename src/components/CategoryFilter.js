@@ -4,11 +4,13 @@ class CategoryFilter extends React.Component {
   constructor(props) {
     super(props);
     this.state = { category: '' };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange() {
-    const { handleFilterChange } = this.props;
-    handleFilterChange(this.state.category);
+  handleChange(e) {
+    const { handleChange } = this.props;
+    this.setState({[e.target.name]: e.target.value});
+    handleChange(e.target.value);
   }
 
   render() {
