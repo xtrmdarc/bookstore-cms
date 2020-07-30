@@ -1,9 +1,14 @@
 import React from "react";
 
 class CategoryFilter extends React.Component {
-  constructor() {
-    super();
-    this.state = { category: "" };
+  constructor(props) {
+    super(props);
+    this.state = { category: '' };
+  }
+
+  handleChange() {
+    const { handleFilterChange } = this.props;
+    handleFilterChange(this.state.category);
   }
 
   render() {
