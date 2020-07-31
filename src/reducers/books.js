@@ -8,8 +8,8 @@ const booksReducer = (state = {}, action) => {
       return newState;
     }
     case REMOVE_BOOK: {
-      const newState = state.slice();
-      newState.splice(action.bookId, 1);
+      let newState = state.slice();
+      newState = newState.filter(book => book.id !== action.bookId);
       return newState;
     }
     default:

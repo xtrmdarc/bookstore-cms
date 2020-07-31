@@ -6,7 +6,8 @@ import { createBook } from '../actions/index';
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title: '', category: '' };
+    this.defaultState = { title: '', category: 'Action' };
+    this.state = this.defaultState;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -15,15 +16,17 @@ class BooksForm extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
+  handleSubmit() {
     const { createBook } = this.props;
     const { title, category } = this.state;
+    if (title === '') return;
+
     const newBook = {
       id: parseInt(Math.random() * 1000, 10),
       title,
       category,
     };
+    this.setState(this.defaultState);
     createBook(newBook);
   }
 
