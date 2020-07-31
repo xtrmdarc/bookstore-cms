@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap");
 
 $brandColor: #0290ff;
 $blackTree: #121212;
@@ -25,14 +25,14 @@ header {
     .logo {
       color: $brandColor;
       font-size: 30px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: 700;
       margin-right: 47px;
     }
 
     .menu {
       margin-right: 41px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: 400;
       text-transform: uppercase;
       color: $blackTree;
@@ -47,8 +47,72 @@ header {
   .right-menu {
     .profile {
       color: $brandColor;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: 700;
+    }
+  }
+}
+
+.listBookTableContainer {
+  padding: 37px 100px;
+}
+
+.bookListTable {
+  width: 100%;
+}
+
+.bookContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 27px;
+  width: 100%;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  .bookInfo {
+    .bookTitle {
+      font-family: "Roboto Slab";
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .bookActions {
+      list-style: none;
+      margin: 0;
+      margin-top: 21px;
+      opacity: 0.5;
+      padding: 0;
+      li {
+        display: inline;
+        margin-right: 34px;
+      }
+    }
+  }
+  .bookState {
+    .percentage {
+      font-size: 32px;
+    }
+    .statusInfo {
+      opacity: 0.5;
+    }
+  }
+  .removeBook {
+    .currentBook {
+      font-family: "Roboto Slab";
+      opacity: 0.5;
+      padding-bottom: 7px;
+    }
+    .chapter {
+      color: $blackTree;
+      font-family: "Roboto Slab";
+    }
+    .removeBookButton {
+      background-color: $brandColor;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      margin-top: 23px;
+      padding: 7px;
     }
   }
 }

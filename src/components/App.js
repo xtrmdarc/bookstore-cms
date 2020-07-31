@@ -1,13 +1,13 @@
-import React from 'react';
-import BooksList from '../containers/BooksList';
-import BooksForm from '../containers/BooksForm';
-import Header from './Header';
+import React from "react";
+import BooksList from "../containers/BooksList";
+import BooksForm from "../containers/BooksForm";
+import Header from "./Header";
 
 const App = () => (
   <div>
     <Header />
-    <BooksForm />
     <BooksList />
+    <BooksForm />
   </div>
 );
 

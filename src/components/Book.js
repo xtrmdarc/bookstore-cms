@@ -1,19 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const Book = props => {
+const Book = (props) => {
   const { book, handleRemoveBook } = props;
   const removeBook = () => {
     handleRemoveBook(book);
   };
 
   return (
-    <tr>
-      <td>{book.id}</td>
-      <td>{book.title}</td>
-      <td>{book.category}</td>
-      <td><button type="button" onClick={removeBook}>Remove Book</button></td>
-    </tr>
+    <div className="bookContainer">
+      <div className="bookInfo">
+        <span>{book.category}</span>
+        <span className="bookTitle">{book.title}</span>
+        <ul className="bookActions">
+          <li>Comments</li>
+          <li>Edit</li>
+        </ul>
+      </div>
+      <div className="bookState">
+        <span className="percentage">64%</span>
+        <span className="statusInfo">Completed</span>
+      </div>
+      <div className="removeBook">
+        <span className="currentBook">CURRENT CHAPTER</span>
+        <span className="chapter">Chapter 17</span>
+        <button className="removeBookButton" type="button" onClick={removeBook}>
+          REMOVE BOOK
+        </button>
+      </div>
+    </div>
   );
 };
 
