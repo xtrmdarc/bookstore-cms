@@ -3,6 +3,16 @@
 $brandColor: #0290ff;
 $blackTree: #121212;
 $headerBorderColor: #e8e8e8;
+$generalPadding: 37px 100px;
+
+@mixin selectBox {
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 8px;
+  background: $brandColor;
+  color: white;
+  border: none;
+  padding: 2px;
+}
 
 * {
   box-sizing: content-box;
@@ -54,7 +64,14 @@ header {
 }
 
 .listBookTableContainer {
-  padding: 37px 100px;
+  padding: $generalPadding;
+
+  .categoryFilter {
+    font-family: 'Montserrat', sans-serif;
+    select {
+     @include selectBox;
+    }
+  }
 }
 
 .bookListTable {

@@ -27,8 +27,8 @@ class CategoryFilter extends React.Component {
       'Sci-Fi',
     ];
     return (
-      <label htmlFor="categories">
-        Choose a category
+      <label className="categoryFilter" htmlFor="categories">
+        Filter by category
         <select
           value={category}
           name="category"
