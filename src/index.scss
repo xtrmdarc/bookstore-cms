@@ -2,6 +2,7 @@
 
 $brandColor: #0290ff;
 $blackTree: #121212;
+$grayTitle: #888888;
 $headerBorderColor: #e8e8e8;
 $generalPadding: 37px 100px;
 
@@ -14,8 +15,15 @@ $generalPadding: 37px 100px;
   padding: 2px;
 }
 
+@mixin brandButton {
+  background-color: $brandColor;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -108,9 +116,11 @@ header {
   .bookState {
     .percentage {
       font-size: 32px;
+      font-family: 'Montserrat', sans-serif;
     }
     .statusInfo {
       opacity: 0.5;
+      font-family: 'Montserrat', sans-serif;      
     }
   }
   .removeBook {
@@ -124,12 +134,49 @@ header {
       font-family: "Roboto Slab";
     }
     .removeBookButton {
-      background-color: $brandColor;
-      border: none;
-      border-radius: 4px;
-      color: #fff;
+      @include brandButton;
       margin-top: 23px;
       padding: 7px;
     }
+  }
+}
+
+.newBookForm {
+  padding: $generalPadding;
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: $grayTitle;
+  }
+
+  .newBook {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+    input, select {
+      height: 100%;
+    }
+
+    .titleInput {
+      width: 50%;
+      font-family: 'Montserrat', sans-serif;
+      padding: 8px;
+    }
+
+    .categoryInput {
+      width: 20%;
+      @include selectBox;
+      padding: 8px;
+    }
+
+    .submitButton {
+      width: 20%;
+      @include brandButton;
+      padding: 8px;
+    }
+
   }
 }

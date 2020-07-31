@@ -42,26 +42,24 @@ class BooksForm extends React.Component {
     ];
     const { title, category } = this.state;
     return (
-      <div>
-        <label htmlFor="title">
-          Title
-          {' '}
+      <div className="newBookForm">
+        <h3>ADD NEW BOOK</h3>
+        <div className="newBook"> 
           <input
             value={title}
             id="title"
             name="title"
             type="text"
+            placeholder="Book Title"
+            className="titleInput"
             onChange={this.handleChange}
           />
-          {' '}
-        </label>
 
-        <label htmlFor="categories">
-          Choose a category
           <select
             value={category}
             name="category"
             id="categories"
+            className="categoryInput"
             onChange={this.handleChange}
           >
             {CATEGORIES.map(cat => (
@@ -70,9 +68,10 @@ class BooksForm extends React.Component {
               </option>
             ))}
           </select>
-        </label>
 
-        <input type="submit" value="SUBMIT" onClick={this.handleSubmit} />
+
+          <input className="submitButton" type="submit" value="SUBMIT" onClick={this.handleSubmit} />
+        </div>
       </div>
     );
   }
