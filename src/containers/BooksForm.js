@@ -44,7 +44,7 @@ class BooksForm extends React.Component {
     return (
       <div className="newBookForm">
         <h3>ADD NEW BOOK</h3>
-        <div className="newBook"> 
+        <div className="newBook">
           <input
             value={title}
             id="title"
@@ -68,7 +68,6 @@ class BooksForm extends React.Component {
               </option>
             ))}
           </select>
-
 
           <input className="submitButton" type="submit" value="SUBMIT" onClick={this.handleSubmit} />
         </div>
