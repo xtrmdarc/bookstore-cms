@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300&display=swap');
+
+$brandColor: #0290ff;
+$blackTree: #121212;
+$headerBorderColor: #e8e8e8;
+
+* {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px;
+  padding: 0 100px;
+  border-bottom: 1px $headerBorderColor solid;
+  .left-menu {
+    .logo {
+      color: $brandColor;
+      font-size: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      margin-right: 47px;
+    }
+
+    .menu {
+      margin-right: 41px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $blackTree;
+      opacity: 0.5;
+
+      &.enabled {
+        opacity: 1;
+      }
+    }
+  }
+
+  .right-menu {
+    .profile {
+      color: $brandColor;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+  }
+}
