@@ -29,6 +29,7 @@ const store = createStore(rootReducer, {
       category: 'Learning',
     },
   ],
+  filter: 'All',
 });
 
 ReactDOM.render(
