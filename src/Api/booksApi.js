@@ -1,7 +1,7 @@
 
 const BooksApi = (() => {
 
-  const endPoint = 'https://salty-plateau-43720.herokuapp.com/';
+  const endPoint = 'https://murmuring-savannah-86260.herokuapp.com/';
 
   const getBooks = () => {
     const resourceUrl = endPoint+'books/index';
