@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap");
+
+$brandColor: #0290ff;
+$blackTree: #121212;
+$grayTitle: #888;
+$headerBorderColor: #e8e8e8;
+$generalPadding: 37px 100px;
+
+@mixin selectBox {
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 8px;
+  background: $brandColor;
+  color: white;
+  border: none;
+  padding: 2px;
+}
+
+@mixin brandButton {
+  background-color: $brandColor;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px;
+  padding: 0 100px;
+  border-bottom: 1px $headerBorderColor solid;
+
+  .left-menu {
+    .logo {
+      color: $brandColor;
+      font-size: 30px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      margin-right: 47px;
+    }
+
+    .menu {
+      margin-right: 41px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $blackTree;
+      opacity: 0.5;
+
+      &.enabled {
+        opacity: 1;
+      }
+    }
+  }
+
+  .right-menu {
+    .profile {
+      color: $brandColor;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+    }
+  }
+}
+
+.listBookTableContainer {
+  padding: $generalPadding;
+
+  .categoryFilter {
+    font-family: 'Montserrat', sans-serif;
+
+    select {
+      @include selectBox;
+    }
+  }
+}
+
+.bookListTable {
+  width: 100%;
+}
+
+.bookContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 27px;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bookInfo {
+    .bookTitle {
+      font-family: "Roboto Slab", sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .bookActions {
+      list-style: none;
+      margin: 0;
+      margin-top: 21px;
+      opacity: 0.5;
+      padding: 0;
+
+      li {
+        display: inline;
+        margin-right: 34px;
+      }
+    }
+  }
+
+  .bookState {
+    .percentage {
+      font-size: 32px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .statusInfo {
+      opacity: 0.5;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .removeBook {
+    .currentBook {
+      font-family: "Roboto Slab", sans-serif;
+      opacity: 0.5;
+      padding-bottom: 7px;
+    }
+
+    .chapter {
+      color: $blackTree;
+      font-family: "Roboto Slab", sans-serif;
+    }
+
+    .removeBookButton {
+      @include brandButton;
+
+      margin-top: 23px;
+      padding: 7px;
+    }
+  }
+}
+
+.newBookForm {
+  padding: $generalPadding;
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: $grayTitle;
+  }
+
+  .newBook {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+    input,
+    select {
+      height: 100%;
+    }
+
+    .titleInput {
+      width: 50%;
+      font-family: 'Montserrat', sans-serif;
+      padding: 8px;
+    }
+
+    .categoryInput {
+      width: 20%;
+
+      @include selectBox;
+
+      padding: 8px;
+    }
+
+    .submitButton {
+      width: 20%;
+
+      @include brandButton;
+
+      padding: 8px;
+    }
+  }
+}

@@ -19,17 +19,9 @@ const BooksList = props => {
   };
 
   return (
-    <div>
+    <div className="listBookTableContainer">
       <CategoryFilter handleChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
+      <table className="bookListTable">
         <tbody>
           {books
             .filter(book => book.category === filter || filter === 'All')
