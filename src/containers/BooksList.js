@@ -34,7 +34,6 @@ class BooksList extends React.Component{
 
   render(){
     const {books, filter} = this.props;
-    console.log(books);
     return (
       <div className="listBookTableContainer">
         <CategoryFilter handleChange={this.handleFilterChange} />
