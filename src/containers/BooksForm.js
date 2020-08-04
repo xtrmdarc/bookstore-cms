@@ -30,6 +30,10 @@ class BooksForm extends React.Component {
     createBook(newBook);
   }
 
+  loadBooks(){
+    this.setState()
+  }
+
   render() {
     const CATEGORIES = [
       'Action',

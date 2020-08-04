@@ -1,17 +1,19 @@
-
+import axios from 'axios'
 const BooksApi = (() => {
-
-  const endPoint = 'https://murmuring-savannah-86260.herokuapp.com/';
-
+  //'https://murmuring-savannah-86260.herokuapp.com/'
+  const start = 'http://localhost:1500/'
+  const index = start + 'books/index';
+   
   const getBooks = () => {
-    const resourceUrl = endPoint+'books/index';
-    console.log(resourceUrl);
-    return fetch(resourceUrl, {mode: 'cors' }).then(result => {
-      result.json().then(data => {
-        console.log(data);
+    
+    return new Promise((resolve, reject)=> {
+        axios
+      .get(index)
+      .then(data => {
+         resolve(data.data.books)
       });
     });
-  }
+}
   
   return { getBooks };
 })();

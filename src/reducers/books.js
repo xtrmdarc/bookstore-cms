@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
+import { CREATE_BOOK, REMOVE_BOOK, UPDATE } from '../actions/index';
 
 const booksReducer = (state = {}, action) => {
   switch (action.type) {
@@ -11,6 +11,9 @@ const booksReducer = (state = {}, action) => {
       let newState = state.slice();
       newState = newState.filter(book => book.id !== action.bookId);
       return newState;
+    }
+    case UPDATE:{
+      return action.booksArray
     }
     default:
       return state;
