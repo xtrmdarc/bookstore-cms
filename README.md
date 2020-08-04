@@ -1,7 +1,7 @@
 <h1 align="center">React Project Bookstore</h1>
 
 <p align="center">
-  <img src ='src/img/' alt='Preview of the Bookstore app'>
+  <img src ='src/img/bookstore.jpg' alt='Preview of the Bookstore app'>
 </p>
 
 # :arrow_right: [Live Demo](https://dieju-bookstore-cms.herokuapp.com/)
