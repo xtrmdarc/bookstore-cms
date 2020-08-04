@@ -17,14 +17,18 @@
 :man: Julian Belmonte
 
 - Github: [Julian Belmonte](https://github.com/jucora)
-- Twitter: [@Julian Belmonte]((https://www.twitter.com/JulianBelmonte)
-- Linkedin: [Julian Belmonte]((https://www.linkedin.com/in/julianbel)
+- Twitter: [@Julian Belmonte](https://www.twitter.com/JulianBelmonte)
+- Linkedin: [Julian Belmonte](https://www.linkedin.com/in/julianbel)
 
 ## :pencil: Main Description
 
 This project consists of building the front-end of an application that will help a fictional company to organize and manage their bookstore. In order to make the app fast, dynamic and responsive to their actions, the implementation of React & Redux is required. This project is part of the main Microverse curriculum for the React course.
 
 For more information about the project requirements, please follow the next link: [React Project Bookstore](https://github.com/microverseinc/project-redux-bookstore)
+
+## :lock_with_ink_pen: Bookstore backend
+
+To keep the information saved, we have developed an API in Ruby on Rails and through requests we have handled the different actions of the user. Click the next link to access to the [API](https://github.com/jucora/bookstore-backend)
 
 ## How to install the App
 
