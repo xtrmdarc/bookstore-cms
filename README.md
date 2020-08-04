@@ -17,8 +17,8 @@
 :man: Julian Belmonte
 
 - Github: [Julian Belmonte](https://github.com/jucora)
-- Twitter: [@Julian Belmonte](twitter.com/JulianBelmonte)
-- Linkedin: [Julian Belmonte](linkedin.com/in/julianbel)
+- Twitter: [@Julian Belmonte]((https://www.twitter.com/JulianBelmonte)
+- Linkedin: [Julian Belmonte]((https://www.linkedin.com/in/julianbel)
 
 ## :pencil: Main Description
 
