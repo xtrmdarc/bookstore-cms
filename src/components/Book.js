@@ -1,16 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import BooksApi from '../Api/booksApi';
 
 const Book = props => {
   const { book, handleRemoveBook } = props;
   const removeBook = () => {
-    handleRemoveBook(book);
+    BooksApi.removeBook(book.id)
+      .then(data => {
+        const removeBook = {
+          id: parseInt(data.data.data)
+        }
+        handleRemoveBook(removeBook);
+      });
   };
 
   return (
     <div className="bookContainer">
       <div className="bookInfo">
-        <span>{book.category}</span>
+        <span>{book.category_name}</span>
         <span className="bookTitle">{book.title}</span>
         <ul className="bookActions">
           <li>Comments</li>

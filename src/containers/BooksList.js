@@ -14,8 +14,6 @@ class BooksList extends React.Component{
     this.handleFilterChange = this.handleFilterChange.bind(this)
   }
 
-
-
   handleRemoveBook(book){
     const {removeBook} = this.props;
     removeBook(book);
@@ -26,17 +24,17 @@ class BooksList extends React.Component{
     changeFilter(filter);
   };
 
-
   componentDidMount(){
     const {updateFromDatabase} = this.props;
-    BooksApi.getBooks().then((result)=>{
+    BooksApi.getBooks().then((result) => {
       updateFromDatabase(result)
-    })
+    });
     
   }
 
   render(){
     const {books, filter} = this.props;
+    console.log(books);
     return (
       <div className="listBookTableContainer">
         <CategoryFilter handleChange={this.handleFilterChange} />

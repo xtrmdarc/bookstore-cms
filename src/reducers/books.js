@@ -9,6 +9,7 @@ const booksReducer = (state = {}, action) => {
     }
     case REMOVE_BOOK: {
       let newState = state.slice();
+      console.log(action);
       newState = newState.filter(book => book.id !== action.bookId);
       return newState;
     }
